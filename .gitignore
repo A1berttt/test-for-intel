@@ -1,0 +1,14 @@
+# data
+datasets/*
+results/*
+
+# system/ide file
+.DS_Store
+.idea
+src/__pycache__
+
+# logfile
+src/log.txt
+
+# ctags
+src/tags
