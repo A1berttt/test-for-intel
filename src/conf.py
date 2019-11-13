@@ -11,6 +11,7 @@ parser.add_argument('--xgb_params_grid', type=dict, default={
     "min_child_weight": range(1, 4),
     "random_state": [0],
     "n_jobs": [1],
+    "objective": ["reg:squarederror"],
 })
 parser.add_argument('--daal_params_grid', type=dict, default={
     "maxIterations": range(100, 501, 100),

@@ -7,7 +7,7 @@ pd.options.mode.chained_assignment = None
 
 
 def xgb_model(df):
-    TRAIN_SIZE, TEST_SIZE, PRED_SIZE = args.row_count * 0.8, args.row_count * 0.1, args.row_count * 0.1
+    TRAIN_SIZE, TEST_SIZE, PRED_SIZE = int(args.row_count * 0.8), int(args.row_count * 0.1), int(args.row_count * 0.1)
     train_df, test_df, pred_df = df.iloc[:TRAIN_SIZE], df.iloc[TRAIN_SIZE: TRAIN_SIZE + TEST_SIZE], df.iloc[-PRED_SIZE:]
     train_x, train_y = train_df[args.src_cols], train_df[args.tgt_col]
     test_x, test_y = test_df[args.src_cols], test_df[args.tgt_col]
